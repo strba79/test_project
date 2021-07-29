@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_symbol">
+
+    <fragment
+        android:id="@+id/navigation_symbol"
+        android:name="rs.nenadstrbic.testproject.fragments.symbol.SymbolFragment"
+        android:label="@string/title_symbol"
+        tools:layout="@layout/fragment_symbol">
+        <action
+            android:id="@+id/action_navigation_symbol_to_symbolDetails"
+            app:destination="@id/symbolDetails" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_news"
+        android:name="rs.nenadstrbic.testproject.fragments.news.NewsFragment"
+        android:label="@string/title_news"
+        tools:layout="@layout/fragment_news" >
+        <action
+            android:id="@+id/action_navigation_news_to_newsDetailsFragment"
+            app:destination="@id/newsDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_info"
+        android:name="rs.nenadstrbic.testproject.fragments.info.InfoFragment"
+        android:label="@string/title_info"
+        tools:layout="@layout/fragment_info" />
+    <fragment
+        android:id="@+id/newsDetailsFragment"
+        android:name="rs.nenadstrbic.testproject.NewsDetailsFragment"
+        android:label="fragment_news_details"
+        tools:layout="@layout/fragment_news_details" />
+    <fragment
+        android:id="@+id/symbolDetails"
+        android:name="rs.nenadstrbic.testproject.SymbolDetails"
+        android:label="fragment_symbol_details"
+        tools:layout="@layout/fragment_symbol_details" />
+</navigation>
