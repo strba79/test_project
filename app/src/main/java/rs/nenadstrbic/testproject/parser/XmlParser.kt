@@ -23,7 +23,7 @@ class XmlParser {
     @Throws(XmlPullParserException::class, IOException::class)
     private fun readFeed(parser: XmlPullParser): List<Symbol> {
         val symbols = mutableListOf<Symbol>()
-        parser.require(XmlPullParser.START_TAG, ns, "symbols")
+        parser.require(XmlPullParser.START_TAG, ns, "symbollist")
         while (parser.next() != XmlPullParser.END_TAG) {
             if (parser.eventType != XmlPullParser.START_TAG) {
                 continue
@@ -46,7 +46,7 @@ class XmlParser {
                 continue
             }
             when (parser.name) {
-                "name" -> name = readTitle(parser)
+                "name" -> name = readName(parser)
                 else -> skip(parser)
             }
         }
@@ -54,7 +54,7 @@ class XmlParser {
     }
 
     @Throws(IOException::class, XmlPullParserException::class)
-    private fun readTitle(parser: XmlPullParser): String {
+    private fun readName(parser: XmlPullParser): String {
         parser.require(XmlPullParser.START_TAG, ns, "name")
         val name = readText(parser)
         parser.require(XmlPullParser.END_TAG, ns, "name")

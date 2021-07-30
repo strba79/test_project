@@ -4,7 +4,7 @@ import android.os.AsyncTask
 import android.preference.PreferenceManager
 import org.xmlpull.v1.XmlPullParserException
 import rs.nenadstrbic.testproject.R
-import rs.nenadstrbic.testproject.activities.BaseActivity
+import rs.nenadstrbic.testproject.activities.base.BaseActivity
 import rs.nenadstrbic.testproject.model.Symbol
 import java.io.IOException
 import java.io.InputStream

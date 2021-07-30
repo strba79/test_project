@@ -6,26 +6,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import rs.nenadstrbic.testproject.R
+import rs.nenadstrbic.testproject.model.Symbol
 
-class SymbolAdapter() : RecyclerView.Adapter<MyViewHolder>() {
-    val symbolList = listOf(
-        "MSFT-Microsoft",
-        "AMZN-Amazon.com",
-        "GOOG-Alphabet Inc.",
-        "WMT-Walmart Inc.",
-        "MSFT-Microsoft",
-        "AMZN-Amazon.com",
-        "GOOG-Alphabet Inc.",
-        "WMT-Walmart Inc.",
-        "MSFT-Microsoft",
-        "AMZN-Amazon.com",
-        "GOOG-Alphabet Inc.",
-        "WMT-Walmart Inc.",
-        "MSFT-Microsoft",
-        "AMZN-Amazon.com",
-        "GOOG-Alphabet Inc.",
-        "WMT-Walmart Inc."
-    )
+class SymbolAdapter(parseXml: List<Symbol>?) : RecyclerView.Adapter<MyViewHolder>() {
+    private val symbolList = parseXml
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val layoutInflater: LayoutInflater = LayoutInflater.from(parent.context)
@@ -34,11 +18,12 @@ class SymbolAdapter() : RecyclerView.Adapter<MyViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.itemView.findViewById<TextView>(R.id.tvListItem).text = symbolList[position]
+        holder.itemView.findViewById<TextView>(R.id.tvListItem).text =
+            symbolList?.get(position)?.name
     }
 
     override fun getItemCount(): Int {
-        return symbolList.size
+        return symbolList!!.size
     }
 }
 

@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<symbols>
+<symbollist>
+    <symbol>
+        <name>DOW JONES INDUSTRIAL AVERAGE INDEX</name>
+    </symbol>
+    <symbol>
+        <name>S&amp;P 500 INDEX</name>
+    </symbol>
+    <symbol>
+        <name>NASDAQ 100 INDEX</name>
+    </symbol>
+    <symbol>
+        <name>Germany 30 Index</name>
+    </symbol>
+    <symbol>
+        <name>AEX-INDEX</name>
+    </symbol>
+    <symbol>
+        <name>KOSPI Composite Index</name>
+    </symbol>
+    <symbol>
+        <name>U.S. Treasuries 5 Year</name>
+    </symbol>
+    <symbol>
+        <name>U.S. Treasuries 10 Year</name>
+    </symbol>
+    <symbol>
+        <name>Palladium US Dollars per Ounce Spot Price</name>
+    </symbol>
+    <symbol>
+        <name>RO Copper - Grade A USD 3 Months</name>
+    </symbol>
+    <symbol>
+        <name>F ZC 7/19</name>
+    </symbol>
     <symbol>
         <name>Microsoft</name>
     </symbol>
-</symbols>
+    <symbol>
+        <name>Alphabet.inc</name>
+    </symbol>
+    <symbol>
+        <name>Facebook.inc</name>
+    </symbol>
+</symbollist>

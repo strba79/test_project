@@ -1,4 +1,4 @@
-package rs.nenadstrbic.testproject.activities
+package rs.nenadstrbic.testproject.activities.base
 
 import androidx.appcompat.app.AppCompatActivity
 import rs.nenadstrbic.testproject.dependencyinjection.ActivityCompositionRoot
