@@ -8,8 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import rs.nenadstrbic.testproject.R
 import rs.nenadstrbic.testproject.model.Symbol
 
-class SymbolAdapter(parseXml: List<Symbol>?) : RecyclerView.Adapter<MyViewHolder>() {
-    private val symbolList = parseXml
+class SymbolAdapter(var parseXml: List<Symbol>?) : RecyclerView.Adapter<MyViewHolder>() {
+    private var symbolList = parseXml
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val layoutInflater: LayoutInflater = LayoutInflater.from(parent.context)
@@ -24,6 +24,10 @@ class SymbolAdapter(parseXml: List<Symbol>?) : RecyclerView.Adapter<MyViewHolder
 
     override fun getItemCount(): Int {
         return symbolList!!.size
+    }
+
+    fun deleteItem(pos: Int) {
+        notifyItemRemoved(pos)
     }
 }
 
